@@ -1,0 +1,16 @@
+<main class="main">
+  <div class="inner">
+      <div class="greeting">
+        <%= "こんにちは、" %>
+        <%= link_to "#{current_user.name}", user_path(current_user.id), class: :greeting__link %>
+      </div> 
+    <div class="card__wrapper">
+      <%# 投稿機能実装後、部分テンプレートでプロトタイプ投稿一覧を表示する %>
+      <%= render partial: 'prototype', collection: @prototype %>
+    </div>
+  </div>
+</main>
+ 
+<%# 
+ /users/tweet.user.id
+/prototypes/:prototype_id/users/prototype.user.id    %>
